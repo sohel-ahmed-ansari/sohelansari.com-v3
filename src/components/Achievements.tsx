@@ -1,7 +1,8 @@
+import { BadgeCheckIcon } from "lucide-react";
+
 import type { KeyAchievement } from "../types/resume";
 import ScrollReveal from "./ScrollReveal";
 import SectionTitle from "./SectionTitle";
-import { BadgeCheckIcon } from "lucide-react";
 
 interface AchievementsProps {
   achievements: KeyAchievement[];

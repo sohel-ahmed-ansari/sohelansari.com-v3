@@ -1,7 +1,8 @@
+import { Gamepad2Icon } from "lucide-react";
+
 import type { PersonalProject as PersonalProjectType } from "../types/resume";
 import ScrollReveal from "./ScrollReveal";
 import SectionTitle from "./SectionTitle";
-import { Gamepad2Icon } from "lucide-react";
 import { GitHubIcon } from "./icons";
 
 interface PersonalProjectProps {

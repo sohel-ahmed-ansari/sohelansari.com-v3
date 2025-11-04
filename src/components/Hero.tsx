@@ -1,7 +1,8 @@
-import { useEffect, useRef } from "react";
-import type { Contact, Name, Role } from "../types/resume";
-import sohelImage from "../assets/sohel.jpg";
 import { MailIcon, MapPinIcon, ChevronDownIcon } from "lucide-react";
+import { useEffect, useRef } from "react";
+
+import sohelImage from "../assets/sohel.jpg";
+import type { Contact, Name, Role } from "../types/resume";
 import { LinkedInIcon } from "./icons";
 
 interface HeroProps {

@@ -1,7 +1,8 @@
+import { MailIcon, PhoneIcon, MapPinIcon, DownloadIcon } from "lucide-react";
+
 import type { Contact } from "../types/resume";
 import ScrollReveal from "./ScrollReveal";
 import SectionTitle from "./SectionTitle";
-import { MailIcon, PhoneIcon, MapPinIcon, DownloadIcon } from "lucide-react";
 import { LinkedInIcon, StackOverflowIcon } from "./icons";
 
 interface FooterProps {

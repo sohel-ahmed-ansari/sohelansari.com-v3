@@ -1,7 +1,8 @@
+import { GraduationCapIcon, CalendarIcon, MapPinIcon } from "lucide-react";
+
 import type { Education as EducationType } from "../types/resume";
 import ScrollReveal from "./ScrollReveal";
 import SectionTitle from "./SectionTitle";
-import { GraduationCapIcon, CalendarIcon, MapPinIcon } from "lucide-react";
 
 interface EducationProps {
   education: EducationType;

@@ -1,7 +1,8 @@
+import { MapPinIcon } from "lucide-react";
+
 import type { Experience as ExperienceType } from "../types/resume";
 import ScrollReveal from "./ScrollReveal";
 import SectionTitle from "./SectionTitle";
-import { MapPinIcon } from "lucide-react";
 
 interface ExperienceProps {
   experiences: ExperienceType[];

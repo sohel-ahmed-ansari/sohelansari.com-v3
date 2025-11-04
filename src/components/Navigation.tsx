@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
 import { MenuIcon, XIcon } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const navItems = [
   { id: "hero", label: "Home" },

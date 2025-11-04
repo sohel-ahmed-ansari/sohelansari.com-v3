@@ -1,13 +1,14 @@
 import { useEffect } from "react";
-import Navigation from "./components/Navigation";
-import Hero from "./components/Hero";
+
 import About from "./components/About";
-import Experience from "./components/Experience";
-import Skills from "./components/Skills";
 import Achievements from "./components/Achievements";
-import PersonalProject from "./components/PersonalProject";
 import AdditionalInfo from "./components/AdditionalInfo";
+import Experience from "./components/Experience";
 import Footer from "./components/Footer";
+import Hero from "./components/Hero";
+import Navigation from "./components/Navigation";
+import PersonalProject from "./components/PersonalProject";
+import Skills from "./components/Skills";
 import resumeData from "./data/resume.json";
 import type { ResumeData } from "./types/resume";
 

@@ -1,7 +1,3 @@
-import type { Education } from "../types/resume";
-import type { Language } from "../types/resume";
-import ScrollReveal from "./ScrollReveal";
-import SectionTitle from "./SectionTitle";
 import {
   GraduationCapIcon,
   CalendarIcon,
@@ -10,6 +6,11 @@ import {
   HeartIcon,
   CarFrontIcon,
 } from "lucide-react";
+
+import type { Education } from "../types/resume";
+import type { Language } from "../types/resume";
+import ScrollReveal from "./ScrollReveal";
+import SectionTitle from "./SectionTitle";
 
 interface AdditionalInfoProps {
   education: Education;
