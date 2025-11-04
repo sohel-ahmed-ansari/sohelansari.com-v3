@@ -126,6 +126,12 @@ This file contains:
 
 To update the portfolio, simply edit this JSON file and the changes will be reflected throughout the site.
 
+## 🚀 Deployment
+
+### GitHub Pages (Automatic)
+
+The project is automatically deployed to GitHub Pages whenever changes are pushed to the `main` branch.
+
 ---
 
 Built with ❤️ using React, TypeScript, and Tailwind CSS
