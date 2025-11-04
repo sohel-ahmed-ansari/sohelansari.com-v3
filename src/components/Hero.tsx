@@ -120,9 +120,9 @@ export default function Hero({ name, role, contact }: HeroProps) {
         <div className="mt-12 animate-fade-in-up animation-delay-600">
           <a
             href="#about"
-            className="inline-block text-white border-2 border-indigo-400 px-8 py-3 rounded-full hover:bg-indigo-400 hover:text-white transition-all duration-300 transform hover:scale-105"
+            className="inline-block text-white border-2 border-indigo-400 px-8 py-3 rounded-full hover:bg-indigo-400 hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-indigo-500/50"
           >
-            View My Work
+            About Me
           </a>
         </div>
       </div>

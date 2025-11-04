@@ -71,6 +71,28 @@
     opacity: 0;
   }
 
+  /* Smooth transitions */
+  * {
+    @apply transition-colors duration-200;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-gray-800;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-indigo-500 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-indigo-600;
+  }
+
   /* Dark mode support */
   @media (prefers-color-scheme: dark) {
     :root {
