@@ -15,3 +15,5 @@ export { default as PlayIcon } from "./PlayIcon";
 export { default as GraduationCapIcon } from "./GraduationCapIcon";
 export { default as CalendarIcon } from "./CalendarIcon";
 export { default as BadgeCheckIcon } from "./BadgeCheckIcon";
+export { default as StackOverflowIcon } from "./StackOverflowIcon";
+export { default as DownloadIcon } from "./DownloadIcon";

@@ -1,29 +1,31 @@
 import type { Contact } from "../types/resume";
-import type { Language } from "../types/resume";
 import ScrollReveal from "./ScrollReveal";
 import SectionTitle from "./SectionTitle";
 import {
   EmailIcon,
   PhoneIcon,
   LocationIcon,
-  LanguageIcon,
-  ShieldIcon,
-  HeartIcon,
+  LinkedInIcon,
+  StackOverflowIcon,
+  DownloadIcon,
 } from "./icons";
 
 interface FooterProps {
   contact: Contact;
-  languages: Language[];
-  interests: string[];
-  drivingLicense: string;
+  stackOverflowUrl?: string;
 }
 
-export default function Footer({
-  contact,
-  languages,
-  interests,
-  drivingLicense,
-}: FooterProps) {
+export default function Footer({ contact, stackOverflowUrl }: FooterProps) {
+  const handleDownloadResume = () => {
+    const link = document.createElement("a");
+    link.href = "/resume.pdf";
+    link.download = "Sohel_Frontend_Engineer_Resume.pdf";
+    link.target = "_blank";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <footer
       id="contact"
@@ -33,9 +35,9 @@ export default function Footer({
         <ScrollReveal>
           <SectionTitle title="Get In Touch" variant="footer" />
         </ScrollReveal>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
           <ScrollReveal delay={100}>
-            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-white/20 transition-all duration-300 h-full flex flex-col">
+            <div className="h-full flex flex-col">
               <h3 className="text-xl font-semibold mb-4 text-indigo-400 flex items-center gap-2">
                 <EmailIcon />
                 Contact
@@ -71,41 +73,54 @@ export default function Footer({
             </div>
           </ScrollReveal>
           <ScrollReveal delay={200}>
-            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-white/20 transition-all duration-300 h-full flex flex-col">
-              <h3 className="text-xl font-semibold mb-4 text-indigo-400 flex items-center gap-2">
-                <LanguageIcon />
-                Languages
+            <div className="h-full flex flex-col">
+              <h3 className="text-xl font-semibold mb-4 text-indigo-400">
+                Links
               </h3>
-              <ul className="space-y-2">
-                {languages.map((lang, index) => (
-                  <li key={index} className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-indigo-400"></span>
-                    {lang.language} - {lang.proficiency}
+              <ul className="space-y-3">
+                <li>
+                  <a
+                    href={contact.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-indigo-400 transition-colors duration-300 flex items-center gap-2 group"
+                  >
+                    <span className="group-hover:scale-110 transition-transform">
+                      <LinkedInIcon />
+                    </span>
+                    LinkedIn
+                  </a>
+                </li>
+                {stackOverflowUrl && (
+                  <li>
+                    <a
+                      href={stackOverflowUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-indigo-400 transition-colors duration-300 flex items-center gap-2 group"
+                    >
+                      <span className="group-hover:scale-110 transition-transform">
+                        <StackOverflowIcon />
+                      </span>
+                      Stack Overflow
+                    </a>
                   </li>
-                ))}
+                )}
               </ul>
-              <p className="mt-4 text-sm text-gray-400 flex items-center gap-2">
-                <ShieldIcon />
-                {drivingLicense}
-              </p>
             </div>
           </ScrollReveal>
           <ScrollReveal delay={300}>
-            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-white/20 transition-all duration-300 h-full flex flex-col">
-              <h3 className="text-xl font-semibold mb-4 text-indigo-400 flex items-center gap-2">
-                <HeartIcon />
-                Interests
+            <div className="h-full flex flex-col">
+              <h3 className="text-xl font-semibold mb-4 text-indigo-400">
+                Resume
               </h3>
-              <div className="flex flex-wrap gap-2">
-                {interests.map((interest, index) => (
-                  <span
-                    key={index}
-                    className="px-3 py-1.5 bg-indigo-600 rounded-full text-sm hover:bg-indigo-500 transition-colors duration-200 cursor-default"
-                  >
-                    {interest}
-                  </span>
-                ))}
-              </div>
+              <button
+                onClick={handleDownloadResume}
+                className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all duration-300 font-medium hover:scale-105 shadow-md hover:shadow-lg hover:shadow-indigo-500/50 w-fit"
+              >
+                <DownloadIcon />
+                Download Resume
+              </button>
             </div>
           </ScrollReveal>
         </div>

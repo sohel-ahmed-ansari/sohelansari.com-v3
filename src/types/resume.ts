@@ -54,6 +54,7 @@ export interface ResumeData {
   name: Name;
   role: Role;
   contact: Contact;
+  stackOverflowUrl: string;
   summary: string;
   experience: Experience[];
   key_achievements: KeyAchievement[];

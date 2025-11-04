@@ -13,6 +13,7 @@
     "linkedin": "https://www.linkedin.com/in/sohelansari/",
     "location": "Dubai, United Arab Emirates"
   },
+  "stackOverflowUrl": "https://stackoverflow.com/users/2279116/shinobi",
   "summary": "Senior Frontend Engineer with 15+ years of experience pioneered in building scalable, high-performance web applications. Expert in React, Typescript, and front-end architecture, with a focus on UX, developer experience, design system scalability, and performance optimization. Proven record of leading cross-functional teams, reducing technical debt, developing pixel perfect UI and accelerating product delivery. Currently residing in Dubai and immediately available for hiring.",
   "experience": [
     {
@@ -172,6 +173,6 @@
     "location": "Mumbai",
     "field": "Computer Science"
   },
-  "driving_license": "UAE Driving License",
+  "driving_license": "UAE Driving License 🇦🇪",
   "interests": ["Board games", "Cooking", "Travelling", "Video games"]
 }

@@ -5,8 +5,8 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import Achievements from "./components/Achievements";
-import Education from "./components/Education";
 import PersonalProject from "./components/PersonalProject";
+import AdditionalInfo from "./components/AdditionalInfo";
 import Footer from "./components/Footer";
 import resumeData from "./data/resume.json";
 import type { ResumeData } from "./types/resume";
@@ -27,13 +27,16 @@ function App() {
       <Experience experiences={resume.experience} />
       <Skills skills={resume.skills} />
       <Achievements achievements={resume.key_achievements} />
-      <Education education={resume.education} />
       <PersonalProject project={resume.personal_project} />
-      <Footer
-        contact={resume.contact}
+      <AdditionalInfo
+        education={resume.education}
         languages={resume.languages}
         interests={resume.interests}
         drivingLicense={resume.driving_license}
+      />
+      <Footer
+        contact={resume.contact}
+        stackOverflowUrl={resume.stackOverflowUrl}
       />
     </div>
   );
