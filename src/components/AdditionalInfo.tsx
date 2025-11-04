@@ -5,11 +5,11 @@ import SectionTitle from "./SectionTitle";
 import {
   GraduationCapIcon,
   CalendarIcon,
-  LocationIcon,
-  LanguageIcon,
-  ShieldIcon,
+  MapPinIcon,
+  LanguagesIcon,
   HeartIcon,
-} from "./icons";
+  CarFrontIcon,
+} from "lucide-react";
 
 interface AdditionalInfoProps {
   education: Education;
@@ -61,7 +61,7 @@ export default function AdditionalInfo({
                         {education.period}
                       </span>
                       <span className="flex items-center gap-2">
-                        <LocationIcon className="w-4 h-4" />
+                        <MapPinIcon className="w-4 h-4" />
                         {education.location}
                       </span>
                     </div>
@@ -76,7 +76,7 @@ export default function AdditionalInfo({
                 {/* Languages */}
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <LanguageIcon className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
+                    <LanguagesIcon className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
                     <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                       Languages
                     </h3>
@@ -102,7 +102,7 @@ export default function AdditionalInfo({
                 {/* Driving License */}
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <ShieldIcon className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
+                    <CarFrontIcon className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
                     <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                       Driving License
                     </h3>

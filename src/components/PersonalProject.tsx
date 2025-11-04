@@ -1,7 +1,8 @@
 import type { PersonalProject as PersonalProjectType } from "../types/resume";
 import ScrollReveal from "./ScrollReveal";
 import SectionTitle from "./SectionTitle";
-import { GitHubIcon, PlayIcon } from "./icons";
+import { Gamepad2Icon } from "lucide-react";
+import { GitHubIcon } from "./icons";
 
 interface PersonalProjectProps {
   project: PersonalProjectType;
@@ -41,7 +42,7 @@ export default function PersonalProject({ project }: PersonalProjectProps) {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all duration-300 font-medium hover:scale-105 shadow-md hover:shadow-lg hover:shadow-indigo-500/50"
               >
-                <PlayIcon />
+                <Gamepad2Icon className="w-5 h-5" />
                 Play Game
               </a>
             </div>

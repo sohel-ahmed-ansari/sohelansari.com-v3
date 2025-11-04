@@ -1,14 +1,8 @@
 import type { Contact } from "../types/resume";
 import ScrollReveal from "./ScrollReveal";
 import SectionTitle from "./SectionTitle";
-import {
-  EmailIcon,
-  PhoneIcon,
-  LocationIcon,
-  LinkedInIcon,
-  StackOverflowIcon,
-  DownloadIcon,
-} from "./icons";
+import { MailIcon, PhoneIcon, MapPinIcon, DownloadIcon } from "lucide-react";
+import { LinkedInIcon, StackOverflowIcon } from "./icons";
 
 interface FooterProps {
   contact: Contact;
@@ -39,7 +33,7 @@ export default function Footer({ contact, stackOverflowUrl }: FooterProps) {
           <ScrollReveal delay={100}>
             <div className="h-full flex flex-col">
               <h3 className="text-xl font-semibold mb-4 text-indigo-400 flex items-center gap-2">
-                <EmailIcon />
+                <MailIcon className="w-5 h-5" />
                 Contact
               </h3>
               <ul className="space-y-3">
@@ -49,7 +43,7 @@ export default function Footer({ contact, stackOverflowUrl }: FooterProps) {
                     className="hover:text-indigo-400 transition-colors duration-300 flex items-center gap-2 group"
                   >
                     <span className="group-hover:scale-110 transition-transform">
-                      <EmailIcon />
+                      <MailIcon className="w-5 h-5" />
                     </span>
                     {contact.email}
                   </a>
@@ -60,13 +54,13 @@ export default function Footer({ contact, stackOverflowUrl }: FooterProps) {
                     className="hover:text-indigo-400 transition-colors duration-300 flex items-center gap-2 group"
                   >
                     <span className="group-hover:scale-110 transition-transform">
-                      <PhoneIcon />
+                      <PhoneIcon className="w-5 h-5" />
                     </span>
                     {contact.phone}
                   </a>
                 </li>
                 <li className="flex items-center gap-2">
-                  <LocationIcon />
+                  <MapPinIcon className="w-5 h-5" />
                   {contact.location}
                 </li>
               </ul>
@@ -118,7 +112,7 @@ export default function Footer({ contact, stackOverflowUrl }: FooterProps) {
                 onClick={handleDownloadResume}
                 className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all duration-300 font-medium hover:scale-105 shadow-md hover:shadow-lg hover:shadow-indigo-500/50 w-fit"
               >
-                <DownloadIcon />
+                <DownloadIcon className="w-5 h-5" />
                 Download Resume
               </button>
             </div>

@@ -1,7 +1,7 @@
 import type { Education as EducationType } from "../types/resume";
 import ScrollReveal from "./ScrollReveal";
 import SectionTitle from "./SectionTitle";
-import { GraduationCapIcon, CalendarIcon, LocationIcon } from "./icons";
+import { GraduationCapIcon, CalendarIcon, MapPinIcon } from "lucide-react";
 
 interface EducationProps {
   education: EducationType;
@@ -35,12 +35,12 @@ export default function Education({ education }: EducationProps) {
                 </p>
                 <div className="flex flex-wrap gap-4 text-gray-600 dark:text-gray-400">
                   <span className="flex items-center gap-2">
-                    <CalendarIcon />
+                    <CalendarIcon className="w-4 h-4" />
                     {education.period}
                   </span>
                   <span>•</span>
                   <span className="flex items-center gap-2">
-                    <LocationIcon className="w-4 h-4" />
+                    <MapPinIcon className="w-4 h-4" />
                     {education.location}
                   </span>
                 </div>

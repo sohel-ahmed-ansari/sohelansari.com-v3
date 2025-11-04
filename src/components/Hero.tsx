@@ -1,12 +1,8 @@
 import { useEffect, useRef } from "react";
 import type { Contact, Name, Role } from "../types/resume";
 import sohelImage from "../assets/sohel.jpg";
-import {
-  EmailIcon,
-  LinkedInIcon,
-  LocationIcon,
-  ChevronDownIcon,
-} from "./icons";
+import { MailIcon, MapPinIcon, ChevronDownIcon } from "lucide-react";
+import { LinkedInIcon } from "./icons";
 
 interface HeroProps {
   name: Name;
@@ -73,7 +69,7 @@ export default function Hero({ name, role, contact }: HeroProps) {
             href={`mailto:${contact.email}`}
             className="flex items-center gap-2 hover:text-indigo-400 transition-colors duration-300"
           >
-            <EmailIcon />
+            <MailIcon className="w-5 h-5" />
             <span className="hidden sm:inline">{contact.email}</span>
             <span className="sm:hidden">Email</span>
           </a>
@@ -87,7 +83,7 @@ export default function Hero({ name, role, contact }: HeroProps) {
             <span>LinkedIn</span>
           </a>
           <div className="flex items-center gap-2">
-            <LocationIcon />
+            <MapPinIcon className="w-5 h-5" />
             <span>{contact.location}</span>
           </div>
         </div>

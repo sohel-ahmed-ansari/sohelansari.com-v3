@@ -1,7 +1,7 @@
 import type { Experience as ExperienceType } from "../types/resume";
 import ScrollReveal from "./ScrollReveal";
 import SectionTitle from "./SectionTitle";
-import { LocationIcon } from "./icons";
+import { MapPinIcon } from "lucide-react";
 
 interface ExperienceProps {
   experiences: ExperienceType[];
@@ -41,7 +41,7 @@ export default function Experience({ experiences }: ExperienceProps) {
                         {exp.period}
                       </p>
                       <p className="text-gray-500 dark:text-gray-500 text-sm flex items-center sm:justify-end gap-1 mt-1">
-                        <LocationIcon className="w-4 h-4" />
+                        <MapPinIcon className="w-4 h-4" />
                         {exp.location}
                       </p>
                     </div>

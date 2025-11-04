@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { MenuIcon, CloseIcon } from "./icons";
+import { MenuIcon, XIcon } from "lucide-react";
 
 const navItems = [
   { id: "hero", label: "Home" },
@@ -104,7 +104,11 @@ export default function Navigation() {
             }`}
             aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
+            {isMobileMenuOpen ? (
+              <XIcon className="w-6 h-6" />
+            ) : (
+              <MenuIcon className="w-6 h-6" />
+            )}
           </button>
         </div>
 
@@ -131,7 +135,7 @@ export default function Navigation() {
                   className="p-2 rounded-md text-white hover:bg-white/10 transition-colors duration-300"
                   aria-label="Close menu"
                 >
-                  <CloseIcon />
+                  <XIcon className="w-6 h-6" />
                 </button>
               </div>
               {/* Navigation Items */}
