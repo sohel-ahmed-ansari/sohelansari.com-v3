@@ -1,0 +1,176 @@
+{
+  "name": {
+    "first": "Sohel Ahmed",
+    "last": "Ansari"
+  },
+  "role": {
+    "title": "Senior Frontend Engineer",
+    "subtitle": "React | TypeScript | Tailwind CSS | Design Systems | UX | DX"
+  },
+  "contact": {
+    "phone": "+971 555933930",
+    "email": "sohel.ahmed.ansari@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/sohelansari/",
+    "location": "Dubai, United Arab Emirates"
+  },
+  "summary": "Senior Frontend Engineer with 15+ years of experience pioneered in building scalable, high-performance web applications. Expert in React, Typescript, and front-end architecture, with a focus on UX, developer experience, design system scalability, and performance optimization. Proven record of leading cross-functional teams, reducing technical debt, developing pixel perfect UI and accelerating product delivery. Currently residing in Dubai and immediately available for hiring.",
+  "experience": [
+    {
+      "title": "Senior Frontend Engineer",
+      "company": "Silkhaus",
+      "period": "05/2024 - Present",
+      "location": "Dubai",
+      "details": [
+        "Led and managed front-end technology at Silkhaus, including a successful transformation to modern build tools like Vite, reducing build times by 40%.",
+        "Boosted website performance by reducing page load time by 30% through route level code splitting and lazy loading.",
+        "Designed a React – Tailwind – Storybook design system, enhancing feature delivery speed by 20% and minimizing UI rework.",
+        "Implemented Arabic language support, ensuring proper bidirectional behavior.",
+        "Launched and integrated Payload CMS, drastically reducing developer dependency by 60% and facilitating autonomous content management for non-technical teams.",
+        "Established frontend engineering standards with CI/CD checks, linting, and testing pipelines, enhancing code quality and release reliability.",
+        "Involved in feature discussion right from wireframes and mockups until implementation and deployment.",
+        "Manage and mentored a remote team, streamlining code reviews for efficient and maintainable releases."
+      ]
+    },
+    {
+      "title": "Senior Software Engineer",
+      "company": "Forto Logistics SE & CO. KG",
+      "period": "05/2022 - 05/2024",
+      "location": "Berlin",
+      "details": [
+        "Improved design consistency by 25% by automating design-token synchronization between GitHub and Figma.",
+        "Directed the Material UI v4 to v5 migration, collaborating across multiple squads to achieve zero-downtime roll out.",
+        "Embedded Datadog metrics in CI pipelines improving code health visibility across teams.",
+        "Being part of the UI platform team, advocated for front-end best practices across teams, fostering a culture of maintainable and scalable UI architecture."
+      ]
+    },
+    {
+      "title": "Senior Programmer",
+      "company": "One.com",
+      "period": "05/2016 - 04/2022",
+      "location": "Dubai",
+      "details": [
+        "Modernized a legacy Knockout.js e-commerce platform by architecting a full React-based rebuild, improving scalability and UX.",
+        "Integrated Stripe Payments (Credit Card, iDEAL, Giropay) for EU markets, increasing checkout conversion by 20%.",
+        "Acted as the main point of contact between my development team in Dubai and management team in Copenhagen to streamline sprint communication and improve delivery predictability.",
+        "Introduced code reviews and linting standards, improving overall code maintainability and on-boarding experience."
+      ]
+    },
+    {
+      "title": "Senior Programmer",
+      "company": "Nexsales Corporation",
+      "period": "11/2014 - 04/2016",
+      "location": "Mumbai",
+      "details": [
+        "Built VoiceReach, an AngularJS-based outreach platform for BPO teams, improving call efficiency and campaign management."
+      ]
+    },
+    {
+      "title": "Software Engineering Sr. Analyst",
+      "company": "Accenture",
+      "period": "02/2014 - 11/2014",
+      "location": "Mumbai",
+      "details": [
+        "Delivered responsive retail website, ensuring mobile optimization and UX consistency."
+      ]
+    },
+    {
+      "title": "Senior Programmer",
+      "company": "Zeus Systems Pvt. Ltd",
+      "period": "07/2009 - 01/2014",
+      "location": "Mumbai",
+      "details": [
+        "Worked on development of many e-learning products to help kids of different age groups learn Maths and Science."
+      ]
+    }
+  ],
+  "key_achievements": [
+    {
+      "title": "Build Time Reduction",
+      "description": "Cut build times by 40% during migration from Webpack to Vite."
+    },
+    {
+      "title": "Page Load Optimization",
+      "description": "Improved website page load by 30% through code splitting and lazy loading."
+    },
+    {
+      "title": "Developer Dependency Reduction",
+      "description": "Reduced developer dependency by 60% through Payload CMS integration."
+    },
+    {
+      "title": "Feature Delivery Acceleration",
+      "description": "Accelerated feature delivery by 20% with React design system implementation."
+    }
+  ],
+  "skills": [
+    "React",
+    "TypeScript",
+    "Vite",
+    "Webpack",
+    "Tailwind CSS",
+    "Node.js",
+    "HTML",
+    "JavaScript",
+    "CSS",
+    "SASS",
+    "LESS",
+    "Bootstrap",
+    "jQuery",
+    "ES6+",
+    "Responsive Web",
+    "Redux",
+    "zustand",
+    "Next.js",
+    "WebSockets",
+    "Jest",
+    "Unit testing",
+    "Vitest",
+    "Cypress",
+    "Integration testing",
+    "Babel",
+    "REST API",
+    "Ajax",
+    "RTL",
+    "i18n",
+    "Git",
+    "GitLab CI/CD",
+    "NPM",
+    "GitHub Actions",
+    "Figma",
+    "ESLint",
+    "Angular",
+    "Material UI",
+    "Datadog",
+    "E-commerce",
+    "E-Learning",
+    "Stripe",
+    "Mentoring",
+    "Scrum",
+    "Agile",
+    "AI",
+    "OpenAI API",
+    "UI Platform",
+    "User Experience (UX)",
+    "Developer Experience (DX)"
+  ],
+  "languages": [
+    { "language": "English", "proficiency": "Proficient" },
+    { "language": "Hindi", "proficiency": "Native" }
+  ],
+  "personal_project": {
+    "name": "Shinobi Sprint",
+    "description": "An endless side-scrolling ninja runner game built with Vite, TypeScript, and PixiJS. Leveraged AI-assisted coding in Cursor IDE to streamline development and boost productivity.",
+    "links": {
+      "github": "https://github.com/sohel-ahmed-ansari/shinobi-sprint",
+      "play_link": "https://sohel-ahmed-ansari.github.io/shinobi-sprint/"
+    }
+  },
+  "education": {
+    "degree": "Bachelor of Engineering",
+    "institution": "University of Mumbai",
+    "period": "05/2005 - 05/2009",
+    "location": "Mumbai",
+    "field": "Computer Science"
+  },
+  "driving_license": "UAE Driving License",
+  "interests": ["Board games", "Cooking", "Travelling", "Video games"]
+}

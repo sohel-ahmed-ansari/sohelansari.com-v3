@@ -1,34 +1,41 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import { useEffect } from "react";
+import Navigation from "./components/Navigation";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Experience from "./components/Experience";
+import Skills from "./components/Skills";
+import Achievements from "./components/Achievements";
+import Education from "./components/Education";
+import PersonalProject from "./components/PersonalProject";
+import Footer from "./components/Footer";
+import resumeData from "./data/resume.json";
+import type { ResumeData } from "./types/resume";
+
+const resume = resumeData as ResumeData;
 
 function App() {
-  const [count, setCount] = useState(0);
+  useEffect(() => {
+    // Smooth scroll behavior
+    document.documentElement.style.scrollBehavior = "smooth";
+  }, []);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="min-h-screen">
+      <Navigation />
+      <Hero name={resume.name} role={resume.role} contact={resume.contact} />
+      <About summary={resume.summary} />
+      <Experience experiences={resume.experience} />
+      <Skills skills={resume.skills} />
+      <Achievements achievements={resume.key_achievements} />
+      <Education education={resume.education} />
+      <PersonalProject project={resume.personal_project} />
+      <Footer
+        contact={resume.contact}
+        languages={resume.languages}
+        interests={resume.interests}
+        drivingLicense={resume.driving_license}
+      />
+    </div>
   );
 }
 
