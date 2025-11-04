@@ -69,7 +69,7 @@ export default function Experience({ experiences }: ExperienceProps) {
                         key={detailIndex}
                         className="text-gray-700 dark:text-gray-300 flex items-start gap-3 group/item"
                       >
-                        <span className="text-indigo-500 dark:text-indigo-400 mt-1.5 shrink-0 group-hover/item:scale-125 transition-transform duration-200">
+                        <span className="text-indigo-500 dark:text-indigo-400 shrink-0 group-hover/item:scale-125 transition-transform duration-200">
                           →
                         </span>
                         <span className="leading-relaxed">{detail}</span>

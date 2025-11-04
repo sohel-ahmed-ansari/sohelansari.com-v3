@@ -24,6 +24,18 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    // Prevent body scroll when mobile menu is open
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMobileMenuOpen]);
+
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
     id: string,
@@ -116,27 +128,62 @@ export default function Navigation() {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden py-4">
-            <div className="flex flex-col space-y-2">
-              {navItems.map((item) => (
-                <a
-                  key={item.id}
-                  href={`#${item.id}`}
-                  onClick={(e) => handleNavClick(e, item.id)}
-                  className={`px-3 py-2 rounded-md text-base font-medium ${
-                    isScrolled
-                      ? "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
-                      : "text-white hover:bg-white/10"
-                  }`}
+        {/* Mobile Navigation Overlay */}
+        <>
+          {/* Backdrop */}
+          <div
+            className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden transition-opacity duration-300 ${
+              isMobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+            }`}
+            onClick={() => setIsMobileMenuOpen(false)}
+          ></div>
+          {/* Slide-in Menu */}
+          <div
+            className={`fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-gray-900 dark:bg-gray-900 z-50 md:hidden transform transition-transform duration-300 ease-in-out shadow-2xl ${
+              isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+            }`}
+          >
+            <div className="flex flex-col h-full">
+              {/* Close button */}
+              <div className="flex justify-end pt-6 pr-6">
+                <button
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="p-2 rounded-md text-white hover:bg-white/10 transition-colors duration-300"
+                  aria-label="Close menu"
                 >
-                  {item.label}
-                </a>
-              ))}
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              </div>
+              {/* Navigation Items */}
+              <div className="flex-1 overflow-y-auto pb-6">
+                <nav className="flex flex-col space-y-1 px-4">
+                  {navItems.map((item) => (
+                    <a
+                      key={item.id}
+                      href={`#${item.id}`}
+                      onClick={(e) => handleNavClick(e, item.id)}
+                      className="px-4 py-3 rounded-lg text-base font-medium text-white hover:bg-white/10 hover:text-indigo-400 transition-all duration-300"
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </nav>
+              </div>
             </div>
           </div>
-        )}
+        </>
       </div>
     </nav>
   );
