@@ -9,9 +9,9 @@ export default function Skills({ skills }: SkillsProps) {
   return (
     <section
       id="skills"
-      className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900"
+      className="bg-white px-4 py-24 sm:px-6 lg:px-8 dark:bg-gray-900"
     >
-      <div className="max-w-5xl mx-auto">
+      <div className="mx-auto max-w-5xl">
         <ScrollReveal>
           <SectionTitle title="Skills & Technologies" />
         </ScrollReveal>
@@ -20,7 +20,7 @@ export default function Skills({ skills }: SkillsProps) {
             {skills.map((skill) => (
               <span
                 key={skill}
-                className="px-5 py-2.5 bg-slate-700 text-white rounded-full text-sm sm:text-base font-medium hover:scale-110 hover:bg-slate-800 hover:shadow-lg hover:shadow-slate-500/50 transition-all duration-300 cursor-default"
+                className="cursor-default rounded-full bg-slate-700 px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:scale-110 hover:bg-slate-800 hover:shadow-lg hover:shadow-slate-500/50 sm:text-base"
               >
                 {skill}
               </span>

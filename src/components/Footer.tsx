@@ -23,27 +23,27 @@ export default function Footer({ contact, stackOverflowUrl }: FooterProps) {
   return (
     <footer
       id="contact"
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 text-white"
+      className="bg-gray-900 px-4 py-20 text-white sm:px-6 lg:px-8"
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="mx-auto max-w-6xl">
         <ScrollReveal>
           <SectionTitle title="Get In Touch" variant="footer" />
         </ScrollReveal>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
+        <div className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           <ScrollReveal delay={100}>
-            <div className="h-full flex flex-col">
-              <h3 className="text-xl font-semibold mb-4 text-indigo-400 flex items-center gap-2">
-                <MailIcon className="w-5 h-5" />
+            <div className="flex h-full flex-col">
+              <h3 className="mb-4 flex items-center gap-2 text-xl font-semibold text-indigo-400">
+                <MailIcon className="h-5 w-5" />
                 Contact
               </h3>
               <ul className="space-y-3">
                 <li>
                   <a
                     href={`mailto:${contact.email}`}
-                    className="hover:text-indigo-400 transition-colors duration-300 flex items-center gap-2 group"
+                    className="group flex items-center gap-2 transition-colors duration-300 hover:text-indigo-400"
                   >
-                    <span className="group-hover:scale-110 transition-transform">
-                      <MailIcon className="w-5 h-5" />
+                    <span className="transition-transform group-hover:scale-110">
+                      <MailIcon className="h-5 w-5" />
                     </span>
                     {contact.email}
                   </a>
@@ -51,24 +51,24 @@ export default function Footer({ contact, stackOverflowUrl }: FooterProps) {
                 <li>
                   <a
                     href={`tel:${contact.phone}`}
-                    className="hover:text-indigo-400 transition-colors duration-300 flex items-center gap-2 group"
+                    className="group flex items-center gap-2 transition-colors duration-300 hover:text-indigo-400"
                   >
-                    <span className="group-hover:scale-110 transition-transform">
-                      <PhoneIcon className="w-5 h-5" />
+                    <span className="transition-transform group-hover:scale-110">
+                      <PhoneIcon className="h-5 w-5" />
                     </span>
                     {contact.phone}
                   </a>
                 </li>
                 <li className="flex items-center gap-2">
-                  <MapPinIcon className="w-5 h-5" />
+                  <MapPinIcon className="h-5 w-5" />
                   {contact.location}
                 </li>
               </ul>
             </div>
           </ScrollReveal>
           <ScrollReveal delay={200}>
-            <div className="h-full flex flex-col">
-              <h3 className="text-xl font-semibold mb-4 text-indigo-400">
+            <div className="flex h-full flex-col">
+              <h3 className="mb-4 text-xl font-semibold text-indigo-400">
                 Links
               </h3>
               <ul className="space-y-3">
@@ -77,9 +77,9 @@ export default function Footer({ contact, stackOverflowUrl }: FooterProps) {
                     href={contact.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-indigo-400 transition-colors duration-300 flex items-center gap-2 group"
+                    className="group flex items-center gap-2 transition-colors duration-300 hover:text-indigo-400"
                   >
-                    <span className="group-hover:scale-110 transition-transform">
+                    <span className="transition-transform group-hover:scale-110">
                       <LinkedInIcon />
                     </span>
                     LinkedIn
@@ -91,9 +91,9 @@ export default function Footer({ contact, stackOverflowUrl }: FooterProps) {
                       href={stackOverflowUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-indigo-400 transition-colors duration-300 flex items-center gap-2 group"
+                      className="group flex items-center gap-2 transition-colors duration-300 hover:text-indigo-400"
                     >
-                      <span className="group-hover:scale-110 transition-transform">
+                      <span className="transition-transform group-hover:scale-110">
                         <StackOverflowIcon />
                       </span>
                       Stack Overflow
@@ -104,15 +104,15 @@ export default function Footer({ contact, stackOverflowUrl }: FooterProps) {
             </div>
           </ScrollReveal>
           <ScrollReveal delay={300}>
-            <div className="h-full flex flex-col">
-              <h3 className="text-xl font-semibold mb-4 text-indigo-400">
+            <div className="flex h-full flex-col">
+              <h3 className="mb-4 text-xl font-semibold text-indigo-400">
                 Resume
               </h3>
               <button
                 onClick={handleDownloadResume}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all duration-300 font-medium hover:scale-105 shadow-md hover:shadow-lg hover:shadow-indigo-500/50 w-fit"
+                className="inline-flex w-fit items-center gap-2 rounded-lg bg-indigo-600 px-6 py-3 font-medium text-white shadow-md transition-all duration-300 hover:scale-105 hover:bg-indigo-700 hover:shadow-lg hover:shadow-indigo-500/50"
               >
-                <DownloadIcon className="w-5 h-5" />
+                <DownloadIcon className="h-5 w-5" />
                 Download Resume
               </button>
             </div>

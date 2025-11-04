@@ -30,46 +30,46 @@ export default function Hero({ name, role, contact }: HeroProps) {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-linear-to-br from-slate-900 via-indigo-900 to-purple-900"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-linear-to-br from-slate-900 via-indigo-900 to-purple-900"
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-        <div className="absolute top-40 right-10 w-72 h-72 bg-violet-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+        <div className="animate-blob absolute top-20 left-10 h-72 w-72 rounded-full bg-indigo-500 opacity-20 mix-blend-multiply blur-xl filter"></div>
+        <div className="animate-blob animation-delay-2000 absolute top-40 right-10 h-72 w-72 rounded-full bg-violet-500 opacity-20 mix-blend-multiply blur-xl filter"></div>
+        <div className="animate-blob animation-delay-4000 absolute -bottom-8 left-1/2 h-72 w-72 rounded-full bg-purple-500 opacity-20 mix-blend-multiply blur-xl filter"></div>
       </div>
 
       <div
         ref={heroRef}
-        className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
+        className="relative z-10 mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8"
       >
         {/* Profile Picture */}
-        <div className="mb-8 animate-fade-in-up">
+        <div className="animate-fade-in-up mb-8">
           <img
             src={sohelImage}
             alt={`${name.first} ${name.last}`}
-            className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto rounded-full border-4 border-indigo-400 shadow-2xl object-cover"
+            className="mx-auto h-32 w-32 rounded-full border-4 border-indigo-400 object-cover shadow-2xl sm:h-40 sm:w-40 md:h-48 md:w-48"
           />
         </div>
 
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-2 animate-fade-in-up animation-delay-200">
+        <h1 className="animate-fade-in-up animation-delay-200 mb-2 text-3xl font-semibold text-white sm:text-4xl md:text-5xl">
           <span>{name.first}</span>{" "}
-          <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-400 to-purple-400">
+          <span className="bg-linear-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
             {name.last}
           </span>
         </h1>
-        <p className="text-xl md:text-2xl lg:text-3xl text-indigo-300 mb-2 animate-fade-in-up animation-delay-300">
+        <p className="animate-fade-in-up animation-delay-300 mb-2 text-xl text-indigo-300 md:text-2xl lg:text-3xl">
           {role.title}
         </p>
-        <p className="text-sm sm:text-base md:text-lg text-gray-400 mb-8 animate-fade-in-up animation-delay-400">
+        <p className="animate-fade-in-up animation-delay-400 mb-8 text-sm text-gray-400 sm:text-base md:text-lg">
           {role.subtitle}
         </p>
-        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-gray-300 animate-fade-in-up animation-delay-500">
+        <div className="animate-fade-in-up animation-delay-500 flex flex-wrap justify-center gap-4 text-gray-300 sm:gap-6">
           <a
             href={`mailto:${contact.email}`}
-            className="flex items-center gap-2 hover:text-indigo-400 transition-colors duration-300"
+            className="flex items-center gap-2 transition-colors duration-300 hover:text-indigo-400"
           >
-            <MailIcon className="w-5 h-5" />
+            <MailIcon className="h-5 w-5" />
             <span className="hidden sm:inline">{contact.email}</span>
             <span className="sm:hidden">Email</span>
           </a>
@@ -77,20 +77,20 @@ export default function Hero({ name, role, contact }: HeroProps) {
             href={contact.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 hover:text-indigo-400 transition-colors duration-300"
+            className="flex items-center gap-2 transition-colors duration-300 hover:text-indigo-400"
           >
             <LinkedInIcon />
             <span>LinkedIn</span>
           </a>
           <div className="flex items-center gap-2">
-            <MapPinIcon className="w-5 h-5" />
+            <MapPinIcon className="h-5 w-5" />
             <span>{contact.location}</span>
           </div>
         </div>
-        <div className="mt-12 animate-fade-in-up animation-delay-600">
+        <div className="animate-fade-in-up animation-delay-600 mt-12">
           <a
             href="#about"
-            className="inline-block text-white border-2 border-indigo-400 px-8 py-3 rounded-full hover:bg-indigo-400 hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-indigo-500/50"
+            className="inline-block transform rounded-full border-2 border-indigo-400 px-8 py-3 text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-indigo-400 hover:text-white hover:shadow-indigo-500/50"
           >
             About Me
           </a>
@@ -98,8 +98,8 @@ export default function Hero({ name, role, contact }: HeroProps) {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <ChevronDownIcon className="w-6 h-6 text-white" />
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 transform animate-bounce">
+        <ChevronDownIcon className="h-6 w-6 text-white" />
       </div>
     </section>
   );

@@ -58,14 +58,14 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg"
+          ? "bg-white/95 shadow-lg backdrop-blur-md dark:bg-gray-900/95"
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between">
           <div className="shrink-0">
             <a
               href="#hero"
@@ -85,9 +85,9 @@ export default function Navigation() {
                 key={item.id}
                 href={`#${item.id}`}
                 onClick={(e) => handleNavClick(e, item.id)}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300 ${
+                className={`rounded-md px-3 py-2 text-sm font-medium transition-colors duration-300 ${
                   isScrolled
-                    ? "text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400"
+                    ? "text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400"
                     : "text-white/90 hover:text-white"
                 }`}
               >
@@ -99,15 +99,15 @@ export default function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden p-2 rounded-md ${
+            className={`rounded-md p-2 md:hidden ${
               isScrolled ? "text-gray-700 dark:text-gray-300" : "text-white"
             }`}
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
-              <XIcon className="w-6 h-6" />
+              <XIcon className="h-6 w-6" />
             ) : (
-              <MenuIcon className="w-6 h-6" />
+              <MenuIcon className="h-6 w-6" />
             )}
           </button>
         </div>
@@ -116,26 +116,26 @@ export default function Navigation() {
         <>
           {/* Backdrop */}
           <div
-            className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden transition-opacity duration-300 ${
-              isMobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+            className={`fixed inset-0 z-40 bg-black/50 backdrop-blur-sm transition-opacity duration-300 md:hidden ${
+              isMobileMenuOpen ? "opacity-100" : "pointer-events-none opacity-0"
             }`}
             onClick={() => setIsMobileMenuOpen(false)}
           ></div>
           {/* Slide-in Menu */}
           <div
-            className={`fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-gray-900 dark:bg-gray-900 z-50 md:hidden transform transition-transform duration-300 ease-in-out shadow-2xl ${
+            className={`fixed top-0 right-0 z-50 h-full w-80 max-w-[85vw] transform bg-gray-900 shadow-2xl transition-transform duration-300 ease-in-out md:hidden dark:bg-gray-900 ${
               isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
             }`}
           >
-            <div className="flex flex-col h-full">
+            <div className="flex h-full flex-col">
               {/* Close button */}
               <div className="flex justify-end pt-6 pr-6">
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="p-2 rounded-md text-white hover:bg-white/10 transition-colors duration-300"
+                  className="rounded-md p-2 text-white transition-colors duration-300 hover:bg-white/10"
                   aria-label="Close menu"
                 >
-                  <XIcon className="w-6 h-6" />
+                  <XIcon className="h-6 w-6" />
                 </button>
               </div>
               {/* Navigation Items */}
@@ -146,7 +146,7 @@ export default function Navigation() {
                       key={item.id}
                       href={`#${item.id}`}
                       onClick={(e) => handleNavClick(e, item.id)}
-                      className="px-4 py-3 rounded-lg text-base font-medium text-white hover:bg-white/10 hover:text-indigo-400 transition-all duration-300"
+                      className="rounded-lg px-4 py-3 text-base font-medium text-white transition-all duration-300 hover:bg-white/10 hover:text-indigo-400"
                     >
                       {item.label}
                     </a>

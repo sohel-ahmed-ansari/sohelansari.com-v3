@@ -35,7 +35,7 @@ export default function SectionTitle({
       <span className="relative inline-block">
         {title}
         <span
-          className={`absolute -bottom-2 left-0 right-0 ${underlineHeight} ${underlineClasses} rounded-full`}
+          className={`absolute right-0 -bottom-2 left-0 ${underlineHeight} ${underlineClasses} rounded-full`}
         ></span>
       </span>
     </h2>

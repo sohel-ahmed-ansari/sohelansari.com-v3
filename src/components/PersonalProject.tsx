@@ -12,18 +12,18 @@ export default function PersonalProject({ project }: PersonalProjectProps) {
   return (
     <section
       id="project"
-      className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900"
+      className="bg-white px-4 py-24 sm:px-6 lg:px-8 dark:bg-gray-900"
     >
-      <div className="max-w-4xl mx-auto">
+      <div className="mx-auto max-w-4xl">
         <ScrollReveal>
           <SectionTitle title="Personal Project" />
         </ScrollReveal>
         <ScrollReveal delay={150}>
-          <div className="bg-linear-to-br from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 p-8 border border-indigo-100 dark:border-indigo-900/30">
-            <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+          <div className="rounded-lg border border-indigo-100 bg-linear-to-br from-indigo-50 to-purple-50 p-8 shadow-lg transition-shadow duration-300 hover:shadow-2xl dark:border-indigo-900/30 dark:from-indigo-900/20 dark:to-purple-900/20">
+            <h3 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">
               {project.name}
             </h3>
-            <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
+            <p className="mb-8 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
               {project.description}
             </p>
             <div className="flex flex-wrap gap-4">
@@ -31,7 +31,7 @@ export default function PersonalProject({ project }: PersonalProjectProps) {
                 href={project.links.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-300 font-medium hover:scale-105 shadow-md hover:shadow-lg"
+                className="inline-flex items-center gap-2 rounded-lg bg-gray-900 px-6 py-3 font-medium text-white shadow-md transition-all duration-300 hover:scale-105 hover:bg-gray-800 hover:shadow-lg dark:bg-white dark:text-gray-900 dark:hover:bg-gray-100"
               >
                 <GitHubIcon />
                 View on GitHub
@@ -40,9 +40,9 @@ export default function PersonalProject({ project }: PersonalProjectProps) {
                 href={project.links.play_link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all duration-300 font-medium hover:scale-105 shadow-md hover:shadow-lg hover:shadow-indigo-500/50"
+                className="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-6 py-3 font-medium text-white shadow-md transition-all duration-300 hover:scale-105 hover:bg-indigo-700 hover:shadow-lg hover:shadow-indigo-500/50"
               >
-                <Gamepad2Icon className="w-5 h-5" />
+                <Gamepad2Icon className="h-5 w-5" />
                 Play Game
               </a>
             </div>
