@@ -15,9 +15,9 @@ export default function SectionTitle({
 
   const variantClasses = {
     default:
-      "text-3xl sm:text-4xl text-gray-900 dark:text-white mb-16 text-center",
+      "text-2xl sm:text-3xl text-gray-900 dark:text-white mb-16 text-center",
     footer: "text-lg sm:text-xl mb-8",
-    "dark-bg": "text-3xl sm:text-4xl text-white mb-16 text-center",
+    "dark-bg": "text-2xl sm:text-3xl text-white mb-16 text-center",
   };
 
   const underlineClasses =

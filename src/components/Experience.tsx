@@ -12,7 +12,7 @@ export default function Experience({ experiences }: ExperienceProps) {
       id="experience"
       className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800"
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <ScrollReveal>
           <SectionTitle title="Experience" />
         </ScrollReveal>

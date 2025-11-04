@@ -17,9 +17,9 @@ export default function Education({ education }: EducationProps) {
           <SectionTitle title="Education" />
         </ScrollReveal>
         <ScrollReveal delay={150}>
-          <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 p-8 border border-gray-100 dark:border-gray-800">
+          <div className="bg-white dark:bg-gray-900 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 p-6 border border-gray-100 dark:border-gray-800">
             <div className="flex items-start gap-4 mb-6">
-              <div className="w-16 h-16 rounded-full bg-linear-to-br from-indigo-500 to-purple-500 flex items-center justify-center flex-shrink-0">
+              <div className="w-12 h-12 rounded-full bg-linear-to-br from-indigo-500 to-purple-500 flex items-center justify-center flex-shrink-0">
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"
