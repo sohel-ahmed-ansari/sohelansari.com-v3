@@ -1,0 +1,9 @@
+# robots.txt for sohelansari.com
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://sohelansari.com/sitemap.xml
+
+Crawl-delay: 1
+
