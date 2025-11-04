@@ -28,13 +28,13 @@ export default function Hero({ name, role, contact }: HeroProps) {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-linear-to-br from-slate-900 via-blue-900 to-slate-900"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-linear-to-br from-slate-900 via-indigo-900 to-purple-900"
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-        <div className="absolute top-40 right-10 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+        <div className="absolute top-40 right-10 w-72 h-72 bg-violet-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
       </div>
 
       <div
@@ -46,17 +46,17 @@ export default function Hero({ name, role, contact }: HeroProps) {
           <img
             src={sohelImage}
             alt={`${name.first} ${name.last}`}
-            className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto rounded-full border-4 border-blue-400 shadow-2xl object-cover"
+            className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 mx-auto rounded-full border-4 border-indigo-400 shadow-2xl object-cover"
           />
         </div>
 
-        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 animate-fade-in-up animation-delay-200">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-2 animate-fade-in-up animation-delay-200">
           <span>{name.first}</span>{" "}
-          <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-cyan-400">
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-400 to-purple-400">
             {name.last}
           </span>
         </h1>
-        <p className="text-base sm:text-lg md:text-xl text-blue-300 mb-2 animate-fade-in-up animation-delay-300">
+        <p className="text-xl md:text-2xl lg:text-3xl text-indigo-300 mb-2 animate-fade-in-up animation-delay-300">
           {role.title}
         </p>
         <p className="text-sm sm:text-base md:text-lg text-gray-400 mb-8 animate-fade-in-up animation-delay-400">
@@ -65,7 +65,7 @@ export default function Hero({ name, role, contact }: HeroProps) {
         <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-gray-300 animate-fade-in-up animation-delay-500">
           <a
             href={`mailto:${contact.email}`}
-            className="flex items-center gap-2 hover:text-blue-400 transition-colors duration-300"
+            className="flex items-center gap-2 hover:text-indigo-400 transition-colors duration-300"
           >
             <svg
               className="w-5 h-5"
@@ -87,7 +87,7 @@ export default function Hero({ name, role, contact }: HeroProps) {
             href={contact.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 hover:text-blue-400 transition-colors duration-300"
+            className="flex items-center gap-2 hover:text-indigo-400 transition-colors duration-300"
           >
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
               <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
@@ -120,7 +120,7 @@ export default function Hero({ name, role, contact }: HeroProps) {
         <div className="mt-12 animate-fade-in-up animation-delay-600">
           <a
             href="#about"
-            className="inline-block text-white border-2 border-blue-400 px-8 py-3 rounded-full hover:bg-blue-400 hover:text-white transition-all duration-300 transform hover:scale-105"
+            className="inline-block text-white border-2 border-indigo-400 px-8 py-3 rounded-full hover:bg-indigo-400 hover:text-white transition-all duration-300 transform hover:scale-105"
           >
             View My Work
           </a>

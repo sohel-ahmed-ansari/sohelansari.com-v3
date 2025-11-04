@@ -8,10 +8,10 @@ export default function Achievements({ achievements }: AchievementsProps) {
   return (
     <section
       id="achievements"
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-br from-blue-600 to-cyan-600"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-br from-indigo-800 to-purple-800"
     >
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl sm:text-5xl font-bold text-white mb-12 text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-12 text-center">
           Key Achievements
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

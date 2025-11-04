@@ -11,10 +11,10 @@ export default function PersonalProject({ project }: PersonalProjectProps) {
       className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900"
     >
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-12 text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
           Personal Project
         </h2>
-        <div className="bg-linear-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+        <div className="bg-linear-to-br from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
           <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
             {project.name}
           </h3>
@@ -37,7 +37,7 @@ export default function PersonalProject({ project }: PersonalProjectProps) {
               href={project.links.play_link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 font-medium"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-300 font-medium"
             >
               <svg
                 className="w-5 h-5"
