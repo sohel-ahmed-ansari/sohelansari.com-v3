@@ -1,73 +1,131 @@
-# React + TypeScript + Vite
+# Sohel Ahmed Ansari - Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website showcasing professional experience, skills, achievements, and personal projects. Built with React, TypeScript, and Tailwind CSS, featuring smooth animations, SEO optimization, and a clean, professional design.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Core Technologies
 
-## React Compiler
+- **React** - UI library
+- **TypeScript** - Type safety
+- **Vite** - Build tool and dev server
+- **Tailwind CSS** - Utility-first CSS framework
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Key Libraries
 
-## Expanding the ESLint configuration
+- **framer-motion** - Animation library
+- **lucide-react** - Icon library
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Development Tools
 
-```js
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
+- **ESLint** - Code linting
+- **Prettier** - Code formatting
+- **TypeScript ESLint** - TypeScript linting
+- **Husky** - Git hooks
+- **lint-staged** - Run linters on staged files
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Prettier Plugins
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+- **@trivago/prettier-plugin-sort-imports** - Automatic import sorting
+- **prettier-plugin-tailwindcss** - Automatic Tailwind class sorting
+
+## 🛠️ Development Setup
+
+### Prerequisites
+
+- **Node.js**
+- **pnpm**
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+cd sohelansari.com-v3
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import reactDom from "eslint-plugin-react-dom";
-import reactX from "eslint-plugin-react-x";
-
-export default defineConfig([
-  globalIgnores(["dist"]),
-  {
-    files: ["**/*.{ts,tsx}"],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs["recommended-typescript"],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
+```bash
+pnpm install
 ```
+
+3. Start the development server:
+
+```bash
+pnpm dev
+```
+
+The site will be available at `http://localhost:5173`
+
+## 📜 Scripts
+
+### `pnpm dev`
+
+Starts the Vite development server with hot module replacement (HMR).
+
+### `pnpm build`
+
+Builds the production-ready application and outputs to the `dist/` directory
+
+### `pnpm preview`
+
+Preview the production build locally. Useful for testing the built application before deployment.
+
+### `pnpm lint`
+
+Runs ESLint to check for code quality issues and potential bugs.
+
+### `pnpm format:fix`
+
+Formats all files using Prettier with:
+
+- Import sorting (third-party imports first, then local imports)
+- Tailwind CSS class sorting (following recommended order)
+- Code style consistency
+
+### `pnpm format:check`
+
+Checks if files are properly formatted without making changes. Useful for CI/CD pipelines.
+
+### `pnpm typecheck`
+
+Runs TypeScript compiler to check for type errors without emitting files. Helps catch type issues early.
+
+### Husky & lint-staged
+
+Git hooks are set up to automatically run linting and formatting:
+
+**Pre-commit hook** (via Husky):
+
+- Runs ESLint with auto-fix on staged files
+- Runs Prettier formatting on staged files
+- Prevents commits if there are linting errors that can't be auto-fixed
+
+This ensures that:
+
+- All committed code follows the project's style guidelines
+- Tailwind classes are automatically sorted
+- Imports are properly organized
+- Code quality is maintained consistently
+
+## 📝 Content Management
+
+The portfolio content is managed through a single JSON file: `src/data/resume.json`
+
+This file contains:
+
+- Personal information
+- Work experience
+- Skills
+- Education
+- Achievements
+- Personal projects
+- Contact information
+
+To update the portfolio, simply edit this JSON file and the changes will be reflected throughout the site.
+
+---
+
+Built with ❤️ using React, TypeScript, and Tailwind CSS
