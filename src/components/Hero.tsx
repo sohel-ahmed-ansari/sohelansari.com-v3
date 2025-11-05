@@ -49,7 +49,7 @@ export default function Hero({
   return (
     <section
       id="hero"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-linear-to-br from-slate-900 via-indigo-900 to-purple-900"
+      className="relative flex min-h-dvh items-center justify-center overflow-hidden bg-linear-to-br from-slate-900 via-indigo-900 to-purple-900"
     >
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
