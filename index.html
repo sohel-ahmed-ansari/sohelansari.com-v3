@@ -70,21 +70,21 @@
     />
     <meta property="twitter:creator" content="@sohelansari" />
 
-    <!-- Structured Data (JSON-LD) -->
+    <!-- Structured Data (JSON-LD) - Person Schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Sohel Ahmed Ansari",
         "jobTitle": "Senior Frontend Engineer",
-        "description": "Senior Frontend Engineer with 15+ years of experience in React, TypeScript, and building scalable web applications.",
+        "description": "Senior Frontend Engineer with 15+ years of experience in React, TypeScript, and building scalable web applications. Expert in front-end architecture, UX, developer experience, and performance optimization.",
         "url": "https://sohelansari.com",
-        "image": "https://sohelansari.com/src/assets/sohel.jpg",
         "email": "sohel.ahmed.ansari@gmail.com",
         "telephone": "+971 555933930",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Dubai",
+          "addressRegion": "Dubai",
           "addressCountry": "United Arab Emirates"
         },
         "sameAs": [
@@ -101,7 +101,12 @@
           "UI/UX Design",
           "Performance Optimization",
           "Design Systems",
-          "Frontend Architecture"
+          "Frontend Architecture",
+          "Tailwind CSS",
+          "Vite",
+          "Next.js",
+          "Redux",
+          "Node.js"
         ],
         "alumniOf": {
           "@type": "EducationalOrganization",
@@ -117,6 +122,27 @@
           "credentialCategory": "degree",
           "educationalLevel": "Bachelor's Degree",
           "about": "Bachelor of Engineering in Computer Science"
+        },
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Silkhaus"
+        }
+      }
+    </script>
+    <!-- Structured Data (JSON-LD) - ProfilePage Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "mainEntity": {
+          "@type": "Person",
+          "name": "Sohel Ahmed Ansari",
+          "url": "https://sohelansari.com",
+          "sameAs": [
+            "https://www.linkedin.com/in/sohelansari/",
+            "https://stackoverflow.com/users/2279116/shinobi",
+            "https://github.com/sohel-ahmed-ansari"
+          ]
         }
       }
     </script>
