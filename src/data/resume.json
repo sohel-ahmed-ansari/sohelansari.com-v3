@@ -174,5 +174,6 @@
     "field": "Computer Science"
   },
   "driving_license": "UAE Driving License 🇦🇪",
-  "interests": ["Board games", "Cooking", "Travelling", "Video games"]
+  "interests": ["Board games", "Cooking", "Travelling", "Video games"],
+  "availableForHiring": true
 }

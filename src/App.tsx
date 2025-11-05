@@ -23,7 +23,12 @@ function App() {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <Hero name={resume.name} role={resume.role} contact={resume.contact} />
+      <Hero
+        name={resume.name}
+        role={resume.role}
+        contact={resume.contact}
+        availableForHiring={resume.availableForHiring}
+      />
       <About summary={resume.summary} />
       <Experience experiences={resume.experience} />
       <Skills skills={resume.skills} />

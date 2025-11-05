@@ -1,4 +1,9 @@
-import { MailIcon, MapPinIcon, ChevronDownIcon } from "lucide-react";
+import {
+  MailIcon,
+  MapPinIcon,
+  ChevronDownIcon,
+  BriefcaseIcon,
+} from "lucide-react";
 import { useEffect, useRef } from "react";
 
 import sohelImage from "../assets/sohel.jpg";
@@ -9,9 +14,15 @@ interface HeroProps {
   name: Name;
   role: Role;
   contact: Contact;
+  availableForHiring: boolean;
 }
 
-export default function Hero({ name, role, contact }: HeroProps) {
+export default function Hero({
+  name,
+  role,
+  contact,
+  availableForHiring,
+}: HeroProps) {
   const heroRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -27,6 +38,13 @@ export default function Hero({ name, role, contact }: HeroProps) {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleScrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   return (
     <section
@@ -45,13 +63,25 @@ export default function Hero({ name, role, contact }: HeroProps) {
         className="relative z-10 mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8"
       >
         {/* Profile Picture */}
-        <div className="animate-fade-in-up mb-8">
+        <div className="animate-fade-in-up mb-4">
           <img
             src={sohelImage}
             alt={`${name.first} ${name.last}`}
             className="mx-auto h-32 w-32 rounded-full border-4 border-indigo-400 object-cover shadow-2xl sm:h-40 sm:w-40 md:h-48 md:w-48"
           />
         </div>
+
+        {availableForHiring && (
+          <div className="animate-fade-in-up animation-delay-350 mb-4 flex items-center justify-center">
+            <button
+              onClick={handleScrollToContact}
+              className="inline-flex cursor-pointer items-center gap-2 rounded-lg border-2 border-green-400/50 bg-green-500/20 px-4 py-2 text-xs font-semibold text-green-300 shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-green-400 hover:bg-green-500/30 hover:shadow-green-500/50"
+            >
+              <BriefcaseIcon className="h-4 w-4 animate-pulse" />
+              <span>Available for Hiring</span>
+            </button>
+          </div>
+        )}
 
         <h1 className="animate-fade-in-up animation-delay-200 mb-2 text-3xl font-semibold text-white sm:text-4xl md:text-5xl">
           <span>{name.first}</span>{" "}

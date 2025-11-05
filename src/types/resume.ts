@@ -64,4 +64,5 @@ export interface ResumeData {
   education: Education;
   driving_license: string;
   interests: string[];
+  availableForHiring: boolean;
 }
