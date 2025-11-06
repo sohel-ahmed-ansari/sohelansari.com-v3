@@ -3,7 +3,7 @@
     "@trivago/prettier-plugin-sort-imports",
     "prettier-plugin-tailwindcss"
   ],
-  "tailwindStylesheet": "./src/index.css",
+  "tailwindStylesheet": "./src/styles/index.css",
   "importOrder": ["<THIRD_PARTY_MODULES>", "^[./]"],
   "importOrderSeparation": true
 }

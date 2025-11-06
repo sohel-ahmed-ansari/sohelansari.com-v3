@@ -22,17 +22,19 @@ export default function Achievements({ achievements }: AchievementsProps) {
           {achievements.map((achievement, index) => (
             <ScrollReveal key={index} delay={index * 100}>
               <div className="flex h-full transform flex-col rounded-lg border border-white/20 bg-white/10 p-6 backdrop-blur-lg transition-all duration-300 hover:scale-105 hover:border-white/30 hover:bg-white/20 hover:shadow-2xl">
-                <div className="mb-4 flex items-center gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/20">
+                <div className="mb-4 flex items-start gap-3">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/20">
                     <BadgeCheckIcon className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white">
-                    {achievement.title}
-                  </h3>
+                  <div className="flex flex-col">
+                    <h3 className="text-lg font-bold text-white">
+                      {achievement.title}
+                    </h3>
+                    <p className="leading-relaxed text-white/90">
+                      {achievement.description}
+                    </p>
+                  </div>
                 </div>
-                <p className="leading-relaxed text-white/90">
-                  {achievement.description}
-                </p>
               </div>
             </ScrollReveal>
           ))}
