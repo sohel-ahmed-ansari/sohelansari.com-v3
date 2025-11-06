@@ -2,6 +2,12 @@
 
 A modern, responsive portfolio website showcasing professional experience, skills, achievements, and personal projects. Built with React, TypeScript, and Tailwind CSS, featuring smooth animations, SEO optimization, and a clean, professional design.
 
+Setup with linting, formatting, type checking, pre-commit hooks and automatic deployment to GitHub Pages using Github Actions. Used ESLint, Prettier, Husky and lint-staged for this.
+
+## Live Website
+
+https://sohelansari.com
+
 ## 🚀 Tech Stack
 
 ### Core Technologies

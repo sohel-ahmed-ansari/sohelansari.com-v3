@@ -6,7 +6,6 @@ import {
 } from "lucide-react";
 import { useEffect, useRef } from "react";
 
-import sohelImage from "../assets/sohel.jpg";
 import type { Contact, Name, Role } from "../types/resume";
 import { LinkedInIcon } from "./icons";
 
@@ -65,7 +64,7 @@ export default function Hero({
         {/* Profile Picture */}
         <div className="animate-fade-in-up mb-4">
           <img
-            src={sohelImage}
+            src="/sohel.jpg"
             alt={`${name.first} ${name.last}`}
             className="mx-auto h-32 w-32 rounded-full border-4 border-indigo-400 object-cover shadow-2xl sm:h-40 sm:w-40 md:h-48 md:w-48"
           />
