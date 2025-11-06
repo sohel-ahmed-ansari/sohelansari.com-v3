@@ -34,7 +34,6 @@ export default function Footer({ contact, stackOverflowUrl }: FooterProps) {
           <ScrollReveal delay={100}>
             <div className="flex h-full flex-col">
               <h3 className="mb-4 flex items-center gap-2 text-xl font-semibold text-indigo-400">
-                <MailIcon className="h-5 w-5" />
                 Contact
               </h3>
               <ul className="space-y-3">
