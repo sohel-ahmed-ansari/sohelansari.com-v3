@@ -158,7 +158,9 @@ export default function Hero({
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <ChevronDownIcon className="h-6 w-6 text-white" />
+        <a href="#about">
+          <ChevronDownIcon className="h-6 w-6 text-white" />
+        </a>
       </div>
     </section>
   );
