@@ -166,6 +166,48 @@
       "play_link": "https://sohel-ahmed-ansari.github.io/shinobi-sprint/"
     }
   },
+  "linkedin_recommendations": {
+    "url": "https://www.linkedin.com/in/sohelansari/details/recommendations",
+    "recommendations": [
+      {
+        "name": "Meghna Harjani",
+        "headline": "All things Product, People & Tech | MBA | PMP",
+        "date": "November 4, 2025",
+        "text": "I have had the pleasure of working with Sohel across two companies — first at Forto in Berlin and most recently at Silkhaus in Dubai, where he joined as a Senior Frontend Engineer. Over the years, Sohel has consistently impressed me with his technical expertise, ownership mindset, and ability to deliver high-quality work with a sense of calm and reliability.\n\nAt Silkhaus, Sohel played a pivotal role in building and leading our frontend team and chapter, managing offshore engineers and mentoring them with patience and clarity. He was instrumental in establishing our first design system, bringing structure and consistency to our user experience. In parallel, he also led key tech debt and scalability initiatives, ensuring our frontend architecture could evolve sustainably as the product and team grew.\n\nBeyond his technical contributions, Sohel stands out for his collaborative nature and leadership qualities. He works seamlessly across teams and with stakeholders, communicates transparently, and demonstrates a deep sense of ownership and accountability in everything he takes on. I could always trust Sohel to deliver — thoughtfully, efficiently, and to the highest standard.\n\nIt's been great working with you - Hopefully we will get more Opportunities in the future!"
+      },
+      {
+        "name": "Mohamed Abdelshafi",
+        "headline": "Product Designer (UX/UI) | Forward-thinking Problem-solver",
+        "date": "November 2, 2025",
+        "text": "Working with Sohel at Silkhaus has been genuinely smooth and dependable. He brought a level of clarity and structure that made collaboration between design and the frontend team feel effortless. He has a strong eye for detail, cares about consistency, and always advocates for building things the right way.\n\nHe is a reliable partner in product work, and someone who makes the design to development handoff feel like a creative partnership instead of a task. Any team would be lucky to have him."
+      },
+      {
+        "name": "Ankit Agarwal",
+        "headline": "Software Development Engineer at Silkhaus | Building something incredible 🚀",
+        "date": "October 25, 2025",
+        "text": "I had the pleasure of working with Sohel at Silkhaus, where I served as a Backend Developer and he led our Frontend team. From day one, Sohel made a remarkable impact - transforming our frontend architecture, improving developer experience, and elevating the overall product quality.\n\nWhat stands out most about Sohel is his rare ability to balance user experience (UX) and developer experience (DX). He genuinely believes that making developers' lives easier ultimately results in a better product - and his work consistently proved that. Within weeks of joining, he modernized our stack by migrating to Vite, introduced linting and formatting checks, set up unit testing pipelines, and built a scalable design system that’s now used across all our products.\n\nHis leadership not only improved delivery speed and code quality but also created a culture of excellence within the frontend team. Bugs decreased, velocity increased, and collaboration improved. He’s also a patient mentor - guiding junior developers with empathy and clarity.\n\nBeyond his technical prowess, Sohel is a joy to work with - calm under pressure, deeply collaborative, and grounded in his values. Any team would be lucky to have him leading their frontend efforts."
+      },
+      {
+        "name": "Joel Alenchery",
+        "headline": "Engineering Manager | Imagineering human AI interfaces @ Aleph Alpha",
+        "date": "October 23, 2025",
+        "text": "I've had the rare privilege of working with Sohel at two different companies, and I can confidently say he's one of the most talented engineers I've encountered.\n\nI first recruited Sohel as a frontend engineer at Nexsales, and he immediately brought a level of design sophistication and UX intuition that transformed our products. He has that rare combination of technical excellence and an innate eye for what makes a great user experience. What impressed me most was watching him grow beyond his frontend roots - he eagerly took on the challenge of working across the full stack, all while maintaining his passion for creating delightful user experiences. Together, we built a complete product from the ground up - from user requirement analysis through UX design, implementation, and rollout.\n\nWhen I started building the UI platform team at Forto and learned Sohel was being onboarded as an engineer, I didn't hesitate to bring him onto my team. As one of the founding engineers, Sohel brought a developer relations mindset to how we approached design system adoption—not from prior experience, but from his intuitive understanding of what engineers need and how to build trust. He understood that technology adoption is ultimately about people - he listened to user feedback, solved real problems, and built genuine trust in our UI platform team. The result? Significantly better adoption rates and user engagement.\n\nHe has a remarkable ability to dive into projects with little context and drive them to successful completion through thorough research and consensus-building. Every rollout he led was smooth, with minimal disruption, because he understood that technical success and human factors are inseparable.\n\nThis same thoughtful approach made Sohel an exceptional mentor and team builder. When friction emerged within the team - as it inevitably does in any growing organization - Sohel actively worked to bridge gaps and foster understanding. He has a gift for bringing varied perspectives into conversations, helping team members see issues from different angles and find common ground. Rather than avoiding difficult dynamics, he leaned into them with empathy and patience, facilitating discussions that helped the team not just resolve conflicts, but grow stronger because of them. His mentorship extended beyond technical guidance; he genuinely invested in helping other engineers develop both their skills and their ability to collaborate effectively.\n\nWhat truly sets Sohel apart isn't just his technical prowess or his interpersonal skills in isolation - it's that he's a humble and genuinely caring human being who brings these qualities together to elevate everyone around him.\n\nIt was an absolute pleasure working with Sohel, and I hope our paths cross again professionally. I would highly recommend Sohel for any product-focused engineering role that values strong UX, pragmatic engineering, and collaborative problem-solving."
+      },
+      {
+        "name": "Kaveesha Nethruwan",
+        "headline": "Senior Software Engineer at Gapstars - Full Stack | ReactJs | NodeJs | AWS | Serverless",
+        "date": "October 21, 2025",
+        "text": "A great leader and an even better teammate!\n\nI had the pleasure of working with Sohel, our Lead, and he’s truly one of those rare people who make a strong impact on both the team and the product. Sohel has an incredible ability to simplify complex problems, find a clear starting point, and guide the team toward the right solution. His leadership is calm, thoughtful, and inspiring — and he always puts people first. Beyond his technical excellence, Sohel is genuinely kind, approachable, and a great culture fit for any team. Any company would be lucky to have him."
+      },
+      {
+        "name": "Roland Liwag",
+        "headline": "Principal Software Engineer at Cvent",
+        "date": "July 21, 2018",
+        "text": "Sohel and I worked together on the webshop project at One.com. He has shown himself to be a quick learner and capable leader. His enthusiasm for seeing the continued success of the project and the business is demonstrated in his daily work. He has strived to learn the nooks and crannies of the entire application architecture. He has the ability to see the details in both small modules as well as entire data flows. It will be exciting to see him grow further in his leadership abilities."
+      }
+    ]
+  },
+
   "education": {
     "degree": "Bachelor of Engineering",
     "institution": "University of Mumbai",

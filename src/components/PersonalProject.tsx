@@ -35,14 +35,18 @@ export default function PersonalProject({ project }: PersonalProjectProps) {
   return (
     <section
       id="project"
-      className="bg-white px-4 py-24 sm:px-6 lg:px-8 dark:bg-gray-900"
+      className="bg-linear-to-br from-indigo-800 to-purple-800 px-4 pt-12 pb-24 sm:px-6 lg:px-8"
     >
       <div className="mx-auto max-w-4xl">
         <ScrollReveal>
-          <SectionTitle title="Personal Project" />
+          <SectionTitle
+            title="Personal Project"
+            variant="dark-bg"
+            className="mb-12"
+          />
         </ScrollReveal>
         <ScrollReveal delay={150}>
-          <div className="rounded-lg border border-indigo-100 bg-linear-to-br from-indigo-50 to-purple-50 p-8 shadow-lg transition-shadow duration-300 hover:shadow-2xl dark:border-indigo-900/30 dark:from-indigo-900/20 dark:to-purple-900/20">
+          <div className="rounded-lg border border-indigo-100 bg-linear-to-br from-indigo-50 to-purple-50 p-8 shadow-lg transition-shadow duration-300 hover:shadow-2xl dark:border-indigo-400/20 dark:from-gray-900/60 dark:to-gray-800/60">
             <h3 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">
               {project.name}
             </h3>

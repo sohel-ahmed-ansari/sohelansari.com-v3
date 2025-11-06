@@ -16,7 +16,7 @@ export default function Experience({ experiences }: ExperienceProps) {
     >
       <div className="mx-auto max-w-4xl">
         <ScrollReveal>
-          <SectionTitle title="Experience" />
+          <SectionTitle title="Experience" className="mb-12" />
         </ScrollReveal>
         <div>
           {experiences.map((exp, index) => (

@@ -24,7 +24,7 @@ export default function Footer({ contact, stackOverflowUrl }: FooterProps) {
   return (
     <footer
       id="contact"
-      className="bg-gray-900 px-4 py-20 text-white sm:px-6 lg:px-8"
+      className="bg-gray-900 px-4 pt-10 pb-20 text-white sm:px-6 lg:px-8"
     >
       <div className="mx-auto max-w-6xl">
         <ScrollReveal>

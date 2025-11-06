@@ -13,7 +13,7 @@ export default function Skills({ skills }: SkillsProps) {
     >
       <div className="mx-auto max-w-5xl">
         <ScrollReveal>
-          <SectionTitle title="Skills & Technologies" />
+          <SectionTitle title="Skills & Technologies" className="mb-12" />
         </ScrollReveal>
         <ScrollReveal>
           <div className="flex flex-wrap justify-center gap-2">

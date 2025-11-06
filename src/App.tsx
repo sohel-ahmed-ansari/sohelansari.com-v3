@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navigation from "./components/Navigation";
 import PersonalProject from "./components/PersonalProject";
+import Recommendations from "./components/Recommendations";
 import Skills from "./components/Skills";
 import resumeData from "./data/resume.json";
 import type { ResumeData } from "./types/resume";
@@ -33,6 +34,9 @@ function App() {
       <Experience experiences={resume.experience} />
       <Skills skills={resume.skills} />
       <Achievements achievements={resume.key_achievements} />
+      {resume.linkedin_recommendations && (
+        <Recommendations recommendations={resume.linkedin_recommendations} />
+      )}
       <PersonalProject project={resume.personal_project} />
       <AdditionalInfo
         education={resume.education}

@@ -13,7 +13,7 @@ export default function About({ summary }: AboutProps) {
     >
       <div className="mx-auto max-w-4xl">
         <ScrollReveal>
-          <SectionTitle title="About Me" className="mb-6" />
+          <SectionTitle title="About Me" className="mb-12" />
         </ScrollReveal>
         <ScrollReveal delay={150}>
           <div className="prose prose-lg dark:prose-invert max-w-none">

@@ -16,7 +16,11 @@ export default function Achievements({ achievements }: AchievementsProps) {
     >
       <div className="mx-auto max-w-6xl">
         <ScrollReveal>
-          <SectionTitle title="Key Achievements" variant="dark-bg" />
+          <SectionTitle
+            title="Key Achievements"
+            variant="dark-bg"
+            className="mb-12"
+          />
         </ScrollReveal>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {achievements.map((achievement, index) => (

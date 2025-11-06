@@ -32,7 +32,7 @@ export default function AdditionalInfo({
     >
       <div className="mx-auto max-w-6xl">
         <ScrollReveal>
-          <SectionTitle title="Additional Information" />
+          <SectionTitle title="Additional Information" className="mb-12" />
         </ScrollReveal>
         <div className="overflow-hidden rounded-lg border border-gray-100 bg-white shadow-lg dark:border-gray-800 dark:bg-gray-900">
           <div className="grid grid-cols-1 divide-y divide-gray-200 lg:grid-cols-2 lg:divide-x lg:divide-y-0 dark:divide-gray-700">

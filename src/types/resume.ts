@@ -50,6 +50,18 @@ export interface Role {
   subtitle: string;
 }
 
+export interface LinkedInRecommendation {
+  name: string;
+  headline: string;
+  date: string;
+  text: string;
+}
+
+export interface LinkedInRecommendations {
+  url: string;
+  recommendations: LinkedInRecommendation[];
+}
+
 export interface ResumeData {
   name: Name;
   role: Role;
@@ -65,4 +77,5 @@ export interface ResumeData {
   driving_license: string;
   interests: string[];
   availableForHiring: boolean;
+  linkedin_recommendations?: LinkedInRecommendations;
 }
