@@ -2,17 +2,70 @@ import useEmblaCarousel from "embla-carousel-react";
 import { QuoteIcon } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 
-import type { LinkedInRecommendations } from "../types/resume";
+import type {
+  LinkedInRecommendation,
+  LinkedInRecommendations,
+} from "../types/resume";
 import ScrollReveal from "./ScrollReveal";
 import SectionTitle from "./SectionTitle";
+import { ChevronLeftIcon, ChevronRightIcon } from "./icons";
 
 interface RecommendationsProps {
   recommendations: LinkedInRecommendations;
 }
 
+interface RecommendationCardProps {
+  rec: LinkedInRecommendation;
+  url: string;
+}
+
+function RecommendationCard({ rec, url }: RecommendationCardProps) {
+  return (
+    <div className="min-w-0 shrink-0 basis-full md:basis-[calc(50%-12px)] lg:basis-[calc(33.333%-16px)]">
+      <div className="flex h-full min-h-[400px] flex-col rounded-xl border border-gray-200 bg-linear-to-br from-indigo-50/80 to-purple-50/80 p-6 shadow-sm transition-all duration-300 hover:border-indigo-300 hover:shadow-lg dark:border-gray-700 dark:from-gray-800/90 dark:to-gray-900/90 dark:hover:border-gray-600">
+        {/* Quote Icon */}
+        <div className="mb-4 flex items-start justify-between">
+          <QuoteIcon className="h-8 w-8 shrink-0 text-indigo-400 dark:text-indigo-500" />
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs font-medium text-indigo-600 transition-colors hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-300"
+          >
+            View on LinkedIn
+          </a>
+        </div>
+
+        {/* Recommendation Text */}
+        <div className="mb-6 flex-1 overflow-hidden">
+          <p className="line-clamp-7 text-base leading-relaxed text-gray-700 dark:text-gray-300">
+            {rec.text}
+          </p>
+        </div>
+
+        {/* Author Info */}
+        <div className="border-t border-gray-200 pt-4 dark:border-gray-700">
+          <div className="font-semibold text-gray-900 dark:text-white">
+            {rec.name}
+          </div>
+          <div className="mt-1 text-xs text-gray-600 dark:text-gray-400">
+            {rec.headline}
+          </div>
+          <div className="mt-2 text-xs text-gray-500 dark:text-gray-500">
+            {rec.date}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Recommendations({
   recommendations,
 }: RecommendationsProps) {
+  const recommendationItems = recommendations?.recommendations ?? [];
+  const hasMultipleRecommendations = recommendationItems.length > 1;
+
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
@@ -61,6 +114,8 @@ export default function Recommendations({
     };
 
     const container = emblaApi.containerNode();
+    if (!container) return;
+
     const pauseAutoplay = () => {
       isPaused = true;
     };
@@ -79,7 +134,7 @@ export default function Recommendations({
     };
   }, [emblaApi]);
 
-  if (!recommendations?.recommendations?.length) {
+  if (!recommendationItems.length) {
     return null;
   }
 
@@ -97,98 +152,40 @@ export default function Recommendations({
           <div className="relative">
             <div className="overflow-hidden py-4" ref={emblaRef}>
               <div className="flex gap-6 px-6">
-                {recommendations.recommendations.map((rec, index) => (
-                  <div
-                    key={index}
-                    className="min-w-0 shrink-0 basis-full md:basis-[calc(50%-12px)] lg:basis-[calc(33.333%-16px)]"
-                  >
-                    <div className="flex h-full min-h-[400px] flex-col rounded-xl border border-gray-200 bg-linear-to-br from-indigo-50/80 to-purple-50/80 p-6 shadow-sm transition-all duration-300 hover:border-indigo-300 hover:shadow-lg dark:border-gray-700 dark:from-gray-800/90 dark:to-gray-900/90 dark:hover:border-gray-600">
-                      {/* Quote Icon */}
-                      <div className="mb-4 flex items-start justify-between">
-                        <QuoteIcon className="h-8 w-8 shrink-0 text-indigo-400 dark:text-indigo-500" />
-                        <a
-                          href={recommendations.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-xs font-medium text-indigo-600 transition-colors hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-300"
-                        >
-                          View on LinkedIn
-                        </a>
-                      </div>
-
-                      {/* Recommendation Text */}
-                      <div className="mb-6 flex-1 overflow-hidden">
-                        <p className="line-clamp-7 text-base leading-relaxed text-gray-700 dark:text-gray-300">
-                          {rec.text}
-                        </p>
-                      </div>
-
-                      {/* Author Info */}
-                      <div className="border-t border-gray-200 pt-4 dark:border-gray-700">
-                        <div className="font-semibold text-gray-900 dark:text-white">
-                          {rec.name}
-                        </div>
-                        <div className="mt-1 text-xs text-gray-600 dark:text-gray-400">
-                          {rec.headline}
-                        </div>
-                        <div className="mt-2 text-xs text-gray-500 dark:text-gray-500">
-                          {rec.date}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                {recommendationItems.map((rec) => (
+                  <RecommendationCard
+                    key={`${rec.name}-${rec.date}`}
+                    rec={rec}
+                    url={recommendations.url}
+                  />
                 ))}
               </div>
             </div>
 
             {/* Navigation Buttons */}
-            {recommendations.recommendations.length > 1 && (
+            {hasMultipleRecommendations && (
               <>
                 <button
                   onClick={scrollPrev}
                   className="absolute top-1/2 left-0 -translate-x-4 -translate-y-1/2 rounded-full bg-white p-2 shadow-lg transition-all hover:scale-110 hover:bg-indigo-50 active:scale-95 md:-translate-x-6 dark:bg-gray-800 dark:hover:bg-gray-700"
                   aria-label="Previous recommendation"
                 >
-                  <svg
-                    className="h-5 w-5 text-gray-700 dark:text-gray-300"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M15 19l-7-7 7-7"
-                    />
-                  </svg>
+                  <ChevronLeftIcon className="h-5 w-5 text-gray-700 dark:text-gray-300" />
                 </button>
                 <button
                   onClick={scrollNext}
                   className="absolute top-1/2 right-0 translate-x-4 -translate-y-1/2 rounded-full bg-white p-2 shadow-lg transition-all hover:scale-110 hover:bg-indigo-50 active:scale-95 md:translate-x-6 dark:bg-gray-800 dark:hover:bg-gray-700"
                   aria-label="Next recommendation"
                 >
-                  <svg
-                    className="h-5 w-5 text-gray-700 dark:text-gray-300"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
+                  <ChevronRightIcon className="h-5 w-5 text-gray-700 dark:text-gray-300" />
                 </button>
               </>
             )}
 
             {/* Dots Indicator */}
-            {recommendations.recommendations.length > 1 && (
+            {hasMultipleRecommendations && (
               <div className="mt-8 flex justify-center gap-2">
-                {recommendations.recommendations.map((_, index) => {
+                {recommendationItems.map((_, index) => {
                   const isActive = selectedIndex === index;
                   return (
                     <button
