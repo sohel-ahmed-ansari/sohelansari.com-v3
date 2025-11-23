@@ -72,7 +72,7 @@ export default function ParticleBackground() {
 
         // Connect to mouse
         const distMouse = Math.hypot(p.x - mouse.x, p.y - mouse.y);
-        if (distMouse < 150) {
+        if (distMouse < 250) {
           ctx.beginPath();
           ctx.strokeStyle = `rgba(165, 180, 252, ${0.2 - distMouse / 750})`;
           ctx.lineWidth = 1;
@@ -85,9 +85,9 @@ export default function ParticleBackground() {
         for (let j = i; j < particles.length; j++) {
           const p2 = particles[j];
           const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
-          if (dist < 100) {
+          if (dist < 150) {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(165, 180, 252, ${0.1 - dist / 1000})`;
+            ctx.strokeStyle = `rgba(165, 180, 252, ${0.125 - dist / 1000})`;
             ctx.lineWidth = 0.5;
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p2.x, p2.y);

@@ -1,6 +1,8 @@
 import { MenuIcon, XIcon } from "lucide-react";
 import { useState, useEffect } from "react";
 
+import { cn } from "../utils";
+
 const navItems = [
   { id: "hero", label: "Home" },
   { id: "about", label: "About" },
@@ -59,9 +61,7 @@ export default function Navigation() {
   return (
     <nav
       className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/95 shadow-lg backdrop-blur-md dark:bg-gray-900/95"
-          : "bg-transparent"
+        isScrolled ? "bg-white shadow-lg dark:bg-gray-900" : "bg-transparent"
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -85,11 +85,12 @@ export default function Navigation() {
                 key={item.id}
                 href={`#${item.id}`}
                 onClick={(e) => handleNavClick(e, item.id)}
-                className={`rounded-md px-3 py-2 text-sm font-medium transition-colors duration-300 ${
-                  isScrolled
-                    ? "text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400"
-                    : "text-white/90 hover:text-white"
-                }`}
+                className={cn(
+                  `rounded-md px-3 py-2 text-sm font-medium transition-colors duration-300`,
+                  isScrolled &&
+                    "text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400",
+                  !isScrolled && "text-white/90 hover:text-white",
+                )}
               >
                 {item.label}
               </a>
