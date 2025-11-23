@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 
 import type { Contact, Name, Role } from "../types/resume";
+import ParticleBackground from "./ParticleBackground";
 import { LinkedInIcon } from "./icons";
 
 interface HeroProps {
@@ -43,8 +44,10 @@ export default function Hero({
   return (
     <section
       id="hero"
-      className="relative flex min-h-dvh items-center justify-center overflow-hidden bg-linear-to-br from-slate-900 via-indigo-900 to-purple-900"
+      className="group relative flex min-h-dvh items-center justify-center overflow-hidden bg-linear-to-br from-slate-900 via-indigo-900 to-purple-900"
     >
+      <ParticleBackground />
+
       {/* Apply parallax transforms: content moves up and fades out on scroll */}
       <motion.div
         style={{ y, opacity }}
