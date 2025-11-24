@@ -20,7 +20,7 @@ export default function Skills({ skills }: SkillsProps) {
             {skills.map((skill) => (
               <span
                 key={skill}
-                className="cursor-default rounded-full bg-slate-700 px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:scale-110 hover:bg-slate-800 hover:shadow-lg hover:shadow-slate-500/50 sm:text-base"
+                className="cursor-default rounded-full bg-slate-700 px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:scale-110 hover:bg-slate-800 hover:shadow-lg hover:shadow-slate-500/50 sm:text-base dark:bg-slate-600 dark:hover:bg-slate-500"
               >
                 {skill}
               </span>

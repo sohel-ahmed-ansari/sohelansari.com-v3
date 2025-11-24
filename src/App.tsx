@@ -10,6 +10,7 @@ import Navigation from "./components/Navigation";
 import PersonalProject from "./components/PersonalProject";
 import Recommendations from "./components/Recommendations";
 import Skills from "./components/Skills";
+import ThemeToggle from "./components/ThemeToggle";
 import resumeData from "./data/resume.json";
 import type { ResumeData } from "./types/resume";
 
@@ -48,6 +49,7 @@ function App() {
         contact={resume.contact}
         stackOverflowUrl={resume.stackOverflowUrl}
       />
+      <ThemeToggle />
     </div>
   );
 }

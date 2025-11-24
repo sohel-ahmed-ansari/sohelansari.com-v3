@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   BriefcaseIcon,
   ChevronDownIcon,
@@ -6,6 +6,7 @@ import {
   MapPinIcon,
 } from "lucide-react";
 
+import { useParallax } from "../hooks/useParallax";
 import type { Contact, Name, Role } from "../types/resume";
 import ParticleBackground from "./ParticleBackground";
 import TypewriterText from "./TypewriterText";
@@ -17,23 +18,13 @@ interface HeroProps {
   contact: Contact;
   availableForHiring: boolean;
 }
-
 export default function Hero({
   name,
   role,
   contact,
   availableForHiring,
 }: HeroProps) {
-  // Parallax effect: Track scroll position
-  const { scrollY } = useScroll();
-
-  // Transform scroll position (0-600px) to vertical offset (0-300px)
-  // Creates upward movement as user scrolls down
-  const y = useTransform(scrollY, [0, 600], [0, 300]);
-
-  // Transform scroll position (0-600px) to opacity (1-0)
-  // Creates fade-out effect as user scrolls down
-  const opacity = useTransform(scrollY, [0, 600], [1, 0]);
+  const { y, opacity } = useParallax({ offset: 300 });
 
   const handleScrollToContact = () => {
     const contactSection = document.getElementById("contact");
@@ -77,7 +68,8 @@ export default function Hero({
             >
               <button
                 onClick={handleScrollToContact}
-                className="inline-flex cursor-pointer items-center gap-2 rounded-lg border-2 border-green-400/50 bg-green-500/20 px-4 py-2 text-xs font-semibold text-green-300 shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(34,197,94,0.5)] active:scale-95"
+                className="inline-flex cursor-pointer items-center gap-2 rounded-lg border-2 border-green-400/50 bg-green-500/20 px-4 py-2 text-xs font-semibold text-green-300 shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(34,197,94,0.5)] active:scale-95 dark:border-green-500/50 dark:bg-green-600/20 dark:text-green-200"
+                aria-label="Scroll to contact section for hiring"
               >
                 <div className="animate-pulse">
                   <BriefcaseIcon className="h-4 w-4" />
@@ -159,7 +151,7 @@ export default function Hero({
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <a href="#about">
+        <a href="#about" aria-label="Scroll to About section">
           <ChevronDownIcon className="h-6 w-6 text-white" />
         </a>
       </div>
