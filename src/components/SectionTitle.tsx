@@ -1,3 +1,5 @@
+import { cn } from "../utils";
+
 interface SectionTitleProps {
   title: string;
   variant?: "default" | "footer" | "dark-bg";
@@ -31,11 +33,15 @@ export default function SectionTitle({
   const underlineHeight = variant === "footer" ? "h-0.5" : "h-1";
 
   return (
-    <h2 className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
+    <h2 className={cn(baseClasses, variantClasses[variant], className)}>
       <span className="relative inline-block">
         {title}
         <span
-          className={`absolute right-0 -bottom-2 left-0 ${underlineHeight} ${underlineClasses} rounded-full`}
+          className={cn(
+            "absolute right-0 -bottom-2 left-0 rounded-full",
+            underlineHeight,
+            underlineClasses,
+          )}
         ></span>
       </span>
     </h2>

@@ -72,9 +72,10 @@ export default function Navigation() {
             <a
               href="#hero"
               onClick={(e) => handleNavClick(e, "hero")}
-              className={`text-xl font-bold ${
-                isScrolled ? "text-gray-900 dark:text-white" : "text-white"
-              }`}
+              className={cn(
+                "text-xl font-bold",
+                isScrolled ? "text-gray-900 dark:text-white" : "text-white",
+              )}
             >
               Portfolio
             </a>
@@ -102,9 +103,10 @@ export default function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`rounded-md p-2 md:hidden ${
-              isScrolled ? "text-gray-700 dark:text-gray-300" : "text-white"
-            }`}
+            className={cn(
+              "rounded-md p-2 md:hidden",
+              isScrolled ? "text-gray-700 dark:text-gray-300" : "text-white",
+            )}
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
@@ -119,16 +121,20 @@ export default function Navigation() {
         <>
           {/* Backdrop */}
           <div
-            className={`fixed inset-0 z-40 bg-black/50 backdrop-blur-sm transition-opacity duration-300 md:hidden ${
-              isMobileMenuOpen ? "opacity-100" : "pointer-events-none opacity-0"
-            }`}
+            className={cn(
+              "fixed inset-0 z-40 bg-black/50 backdrop-blur-sm transition-opacity duration-300 md:hidden",
+              isMobileMenuOpen
+                ? "opacity-100"
+                : "pointer-events-none opacity-0",
+            )}
             onClick={() => setIsMobileMenuOpen(false)}
           ></div>
           {/* Slide-in Menu */}
           <div
-            className={`fixed top-0 right-0 z-50 h-full w-80 max-w-[85vw] transform bg-gray-900 shadow-2xl transition-transform duration-300 ease-in-out md:hidden dark:bg-gray-900 ${
-              isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-            }`}
+            className={cn(
+              "fixed top-0 right-0 z-50 h-full w-80 max-w-[85vw] transform bg-gray-900 shadow-2xl transition-transform duration-300 ease-in-out md:hidden dark:bg-gray-900",
+              isMobileMenuOpen ? "translate-x-0" : "translate-x-full",
+            )}
           >
             <div className="flex h-full flex-col">
               {/* Close button */}
