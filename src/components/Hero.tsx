@@ -1,13 +1,14 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
+  BriefcaseIcon,
+  ChevronDownIcon,
   MailIcon,
   MapPinIcon,
-  ChevronDownIcon,
-  BriefcaseIcon,
 } from "lucide-react";
 
 import type { Contact, Name, Role } from "../types/resume";
 import ParticleBackground from "./ParticleBackground";
+import TypewriterText from "./TypewriterText";
 import { LinkedInIcon } from "./icons";
 
 interface HeroProps {
@@ -111,11 +112,8 @@ export default function Hero({
             {role.title}
           </p>
 
-          <p
-            className="animate-fade-in-up mb-8 text-sm text-gray-400 sm:text-base md:text-lg"
-            style={{ animationDelay: "1.2s" }}
-          >
-            {role.subtitle}
+          <p className="mb-8 min-h-6 text-sm text-gray-400 sm:text-base md:min-h-7 md:text-lg">
+            <TypewriterText text={role.subtitle} delay={1.2} loop={true} />
           </p>
 
           <div

@@ -23,10 +23,10 @@ export default function Experience({ experiences }: ExperienceProps) {
             <ScrollReveal
               key={index}
               delay={index * 100}
-              className="border-l-4 border-indigo-500 pb-12 last:pb-0 dark:border-indigo-400"
+              className="border-l-2 border-indigo-500 pb-12 last:pb-0 dark:border-indigo-400"
             >
               <div className="group relative pl-8">
-                <div className="absolute top-0 -left-3.5 h-6 w-6 rounded-full bg-indigo-500 ring-4 ring-gray-50 transition-transform duration-300 group-hover:scale-125 dark:bg-indigo-400 dark:ring-gray-800"></div>
+                <div className="absolute top-9 -left-[7px] h-3 w-3 rounded-full bg-indigo-500 ring-4 ring-gray-50 transition-transform duration-300 group-hover:scale-125 dark:bg-indigo-400 dark:ring-gray-800"></div>
                 <div className="rounded-lg border border-gray-100 bg-white p-6 shadow-md transition-all duration-300 hover:border-indigo-200 hover:shadow-2xl dark:border-gray-800 dark:bg-gray-900 dark:hover:border-indigo-800">
                   <div className="mb-4 flex flex-col sm:flex-row sm:items-start sm:justify-between">
                     <div>

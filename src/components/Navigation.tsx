@@ -1,5 +1,6 @@
+import { motion, useScroll } from "framer-motion";
 import { MenuIcon, XIcon } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import { cn } from "../utils";
 
@@ -17,6 +18,7 @@ const navItems = [
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { scrollYProgress } = useScroll();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -158,6 +160,12 @@ export default function Navigation() {
           </div>
         </>
       </div>
+
+      {/* Scroll Progress Bar */}
+      <motion.div
+        className="absolute bottom-0 left-0 h-1 w-full origin-left bg-linear-to-r from-indigo-500 to-purple-600"
+        style={{ scaleX: scrollYProgress }}
+      />
     </nav>
   );
 }
