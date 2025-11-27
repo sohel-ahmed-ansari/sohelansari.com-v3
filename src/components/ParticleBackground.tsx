@@ -8,7 +8,11 @@ interface Particle {
   size: number;
 }
 
-export default function ParticleBackground() {
+export default function ParticleBackground({
+  className,
+}: {
+  className?: string;
+}) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -126,7 +130,7 @@ export default function ParticleBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 z-0 h-full w-full"
+      className={className}
       style={{ background: "transparent" }}
     />
   );
