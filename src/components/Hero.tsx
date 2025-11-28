@@ -174,6 +174,8 @@ const FogEffect = ({ className }: { className?: string }) => {
           animate={{
             x: ["-50vw", "105vw"],
             rotate: [0, 180],
+            opacity: [0, 0.3, 0.3, 0.3, 0.3, 0],
+            scale: [1, 1.5, 1],
           }}
           transition={{
             x: {
@@ -184,6 +186,18 @@ const FogEffect = ({ className }: { className?: string }) => {
             },
             rotate: {
               duration: 40,
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "linear",
+            },
+            opacity: {
+              duration: 30,
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "linear",
+            },
+            scale: {
+              duration: 30,
               repeat: Infinity,
               repeatType: "loop",
               ease: "linear",
@@ -204,6 +218,8 @@ const FogEffect = ({ className }: { className?: string }) => {
           animate={{
             x: ["50vw", "-105vw"],
             rotate: [0, -180],
+            opacity: [0, 0.3, 0.3, 0.3, 0.3, 0],
+            scale: [1, 1.5, 1],
           }}
           transition={{
             x: {
@@ -214,6 +230,18 @@ const FogEffect = ({ className }: { className?: string }) => {
             },
             rotate: {
               duration: 45,
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "linear",
+            },
+            opacity: {
+              duration: 35,
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "linear",
+            },
+            scale: {
+              duration: 35,
               repeat: Infinity,
               repeatType: "loop",
               ease: "linear",
